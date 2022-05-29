@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 객체1</title>
+    <link rel="stylesheet" href="css/box.css">
+</head>
+<body>
+<!-- <script>
+    const picture = {
+        pic: "images/pic01.jpg",
+        title: "에펠탑의 신랑신부",
+        artist: "마르크 사갈",
+        year: "1938",
+        // list:function(){}
+        list(){
+            document.write(
+                `
+                <dl>
+                    <dt>${this.title}</dt>
+                    <dd>
+                        <img src="${this.pic}" alt="${this.title}">
+                    </dd>
+                    <dd>${this.artist}</dd>
+                    <dd>${this.year}</dd>
+                </dl>    
+                `
+
+            )
+        }
+  }
+  picture.list();
+</script> -->
+       <!-- images/pic01.jpg 
+        에펠탑의 신랑신부 
+        마르크 샤갈 
+        1938 -->
+
+    <dl>
+        <dt>그림의 타이틀</dt>
+        <dd>
+            <img src="" alt="">
+        </dd>
+        <dd>그림의 작자</dd>
+        <dd>그림의 제작년도</dd>
+    </dl>
+    <p>
+        <button type="text">버튼</button>
+    </p>
+
+<script>
+// 객체 생성, 오브젝트
+let picture = {
+    pic :"images/pic01.jpg",
+    title :"에펠탑의 신랑신부",
+    artist :"마르코 샤갈",
+    year :"1938"
+} 
+let btn = document.querySelector("button");
+// button 클릭시 요소의 콘텐츠나 속성을 완성 -> 객체 데이터 가져오기
+btn.onclick = function(){
+    document.querySelector("dt").innerHTML = picture.title;
+    document.querySelector("dd>img").setAttribute("src", picture.pic)
+    document.querySelector("dd>img").setAttribute("alt", picture.title)
+    document.querySelector("dd:nth-child(3)").innerHTML = picture.artist;
+    document.querySelector("dd:nth-child(4)").innerHTML = picture.year;
+}
+</script>
+</body>
+</html>

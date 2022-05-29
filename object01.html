@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Object</title>
+</head>
+
+<body>
+
+<script>
+    // 책 -> 시스템 : 이름, 저자, 현재 부수
+    // 기능 -> 이름 저자 -> 리스트 출력
+    // 부수 -> 1씩 추가
+
+    const book = new object();
+    book.title = "javascript";
+    book.actor = "A 작자";
+    book.num = 1;
+
+    book.list = function(){
+        document.write(
+            `
+            책이름: ${book.title} <br>
+            작가 : ${book.actor} <br>
+            현재판매부수: ${book.num} <br>
+            `
+        )    
+    }
+
+    
+    book.numplus = function(){
+        book.num += 1;
+
+    }
+    book.list();
+    book.numplus();
+    book.numplus();
+    book.numplus();
+    console.log(book.num);
+
+    book.list();
+</script>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>classes</title>
+
+</head>
+
+<body>
+<script>
+    // function book(title,type){
+    //     this.title = title;
+    //     this.type = type;
+    // }
+    // book.prototype.action = function(){
+    //     console.log(
+    //         `${this.type} : ${this.title}`
+    //     )
+    // }
+
+    class book{
+        constructor(title,type){
+            this.title = title;
+            this.type = type;
+        }
+        action(){
+            console.log(
+                `${this.type} : ${this.title}`
+
+            )
+        }
+    }
+
+    const it = [
+        new book("photoshop","photo"), // 0
+        new book("javascript","script"), // 1
+        new book("html","code")         // 2
+    ]
+
+    it[0].action();
+    it[1].action();
+    it[2].action();
+</script>
+</body>
+
+
+
+</html>

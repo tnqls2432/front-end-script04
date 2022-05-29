@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>생성자함수</title>
+
+</head>
+
+<body>
+<script>
+//생성자 함수
+    function book(title,actor,year){
+        // book.title = title;
+        this.title = title;
+        this.actor = actor;
+        this.year = year;
+        // this.list = function(){
+        //     document.write(
+        //         `<p> ${this.title}:${this.actor} :${this.year}</p>`
+        //     )
+        // }
+    }
+    //prototype
+    book.prototype.list = function(){
+        document.write(
+            `<p> ${this.title}:${this.actor} :${this.year}</p>`
+        );
+    }
+// 인스턴스
+    // const grapic = new book("photoshop", "A작자",2021);
+    // const it = new book("javascript","B작자",2022);
+    // const office = new book("excel","c작자",2020);
+    // const 인스턴스 이름 = [new Book(),new Book(), new Book()]
+    
+    const it = [
+        new book("photoshop", "A작자", 2021),
+        new book("javascript", "B작자", 2022),
+        new book("excel", "C작자", 2020)
+    ]
+
+
+
+// 사용
+
+for (let item of it){
+    item.list();
+}
+// console.log(it[0]);
+// console.log(it[0].title);
+// it[1].list();
+// push():배열 추가, pop(): 뒤에
+
+// for in으로 리스트 출력
+// console.log(it.length);
+// for(let i in it){
+// it[i].list();
+// } //인덱스 기반
+
+// // for of 리스트 출력
+// for(let i of it){
+//     i.list();
+// } 
+</script>
+</body>
+
+
+
+</html>
