@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리엑트에서 자주 쓰이는 자바스크립트 문법</title>
+</head>
+<body>
+<script>
+    // let name = "subin";
+    // let age = 17;
+
+    // let person={
+    //     // name,
+    //     // age
+    //     name:name,
+    //     age:age
+    // }
+    // console.log(person);
+
+    // let person = {
+    //     name:"noona",
+    //     age:20
+    // }
+
+    // let name = person.name
+    // let age = person["age"]
+
+    // let {name,age} = person
+
+    // console.log(name,age);
+
+    // let array = [1,2,3,4]
+    // let [a,b]=array
+
+    // console.log(a,b);
+
+    let person = {name:"noona",age:12};
+
+    let person2 = {...person,name:"jimin"}
+    let person3 = person
+    console.log(person2);
+    console.log(person3);
+
+    console.log(person==person2);
+    console.log(person==person3);
+
+    let a = [1,2];
+    let b = [...a,3];
+    console.log(b);
+
+    let c = [...a,...b]
+    console.log(c);
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array method</title>
+</head>
+<body>
+    <script>
+         //find 함수
+        /*
+        그 다음 객체도 id가 2인데 리턴이 안 된 이유
+        이는 find가 처음 원하는 요소를 찾으면 바로 해당 함수에서 빠져나가기 때문이다.
+
+        */
+//         const animal = [
+//     {
+//         id : 0,
+//         diverse : 'cat',
+//         isIt : true
+//     },
+//     {
+//         id : 2,
+//         diverse : 'carrot',
+//         isIt : false
+//     },
+//     {
+//         id : 2,
+//         diverse : 'dog',
+//         isIt : true
+//     }
+// ]
+// const aniArr1 = animal.find(animals => (animals.id === 2));
+
+// animal.find(function animals(){
+//     return animals.id === 2;
+// })   arrow function 없을 시절 이렇게 썼다.
+
+// console.log(aniArr1);		//{id: 2, diverse: "carrot", isIt: false}
+
+//filter()
+/*
+find의 좀 더 광범위한 버전이다.
+좀 전의 find가 처음 true가 나온 요소만 반환한다면
+filter는 반복문처럼 전체 배열 요소를 돌아 true가 나오는 요소를 모두 반환한다.
+
+*/
+const animal = [
+    {
+        id : 0,
+        diverse : 'cat',
+        isIt : true
+    },
+    {
+        id : 2,
+        diverse : 'carrot',
+        isIt : false
+    },
+    {
+        id : 2,
+        diverse : 'dog',
+        isIt : true
+    }
+]
+
+const aniArr1 = animal.filter(animals => (animals.id === 2));
+console.log(aniArr1);		//0: {id: 2, diverse: "carrot", isIt: false}
+		// 1: {id: 2, diverse: "dog", isIt: true}
+        //id가 2인 모든 객체를 반환된 모습을 볼 수 있다.
+
+/*
+조건에 맞게 짝지어진 새로운 배열을 만들어낸다.
+함수 내에 조건문을 이용하여 해당 조건에 맞는 값만 반환할 수도 있다.
+
+*/
+
+const addArr = [1, 2, 3];
+let result = addArr.map((num)=>{
+	return num + 5;
+});
+console.log(result);		//[6, 7, 8]
+
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = [1, 2, 3, 4, 11];
+console.log(arr1.some(isIt => isIt > 10)); //false
+console.log(arr2.some(isIt => isIt > 10)); //true
+
+
+    </script>
+</body>
+</html>
